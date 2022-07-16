@@ -15,7 +15,7 @@ download_fig = (
     pn.ggplot(wifi_df, pn.aes(x="code", y="download")) + 
     pn.geom_boxplot(fill=speed_cyan) + 
     pn.ylim(0, 1000) + 
-    pn.labs(x="Configuration", y="Download speed (mbps)") +
+    pn.labs(x="Configuration", y="Download speed (Mbps)") +
     pn.theme_bw()
 )
 
@@ -24,7 +24,7 @@ upload_fig = (
     pn.ggplot(wifi_df, pn.aes(x="code", y="upload")) + 
     pn.geom_boxplot(fill=speed_purple) + 
     pn.ylim(0, 300) + 
-    pn.labs(x="Configuration", y="Upload speed (mbps)") +
+    pn.labs(x="Configuration", y="Upload speed (Mbps)") +
     pn.theme_bw()
 )
 
@@ -51,6 +51,7 @@ def save_figs(do_combined: bool = False) -> None:
     Saving boxplots to their respective locations 
     By default does not save the combined plot, set do_combined=True to save 
     """
+    print("Saving plots ...")
     plot_params = {"width": 8, "height": 5, "verbose": False}
     download_fig.save("./img/download_box.png", **plot_params)
     upload_fig.save("./img/upload_box.png", **plot_params)
@@ -63,6 +64,7 @@ def print_figs(do_combined: bool = False) -> None:
     Prints boxplots for all three variables 
     By default does not print the combined plot, set do_combined=True to print  
     """
+    print("Printing plots ...")
     print(download_fig)
     print(upload_fig)
     print(ping_fig)
