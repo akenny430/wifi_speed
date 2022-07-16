@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+
 import plotnine as pn 
 
 from data import wifi_df, wifi_melt_df
@@ -49,9 +51,10 @@ def save_figs(do_combined: bool = False) -> None:
     Saving boxplots to their respective locations 
     By default does not save the combined plot, set do_combined=True to save 
     """
-    download_fig.save("./img/download_box.png")
-    upload_fig.save("./img/upload_box.png")
-    ping_fig.save("./img/ping_box.png")
+    plot_params = {"width": 8, "height": 5, "verbose": False}
+    download_fig.save("./img/download_box.png", **plot_params)
+    upload_fig.save("./img/upload_box.png", **plot_params)
+    ping_fig.save("./img/ping_box.png", **plot_params)
     if do_combined: 
         combined_fig.save("./img/combined_box.png")
 
@@ -68,4 +71,4 @@ def print_figs(do_combined: bool = False) -> None:
 
 if __name__ == "__main__": 
     save_figs()
-    print_figs()
+    # print_figs() 
