@@ -1,4 +1,4 @@
-# Testing Wifi Speed 
+# Testing WiFi Speed 
 
 ## Background 
 
@@ -96,6 +96,26 @@ Standard deviation of test results:
 | wireless_base    |                  6.5029 |               5.61764 |    1.22927  |
 | wireless_orbi    |                 58.7189 |              16.7771  |    1.88562  |
 
+
+Maximum of test results: 
+| Configuration    |   Download Speed (Mbps) |   Upload Speed (Mbps) |   Ping (ms) |
+|:-----------------|------------------------:|----------------------:|------------:|
+| ethernet_base    |                  941.29 |                233.71 |           8 |
+| ethernet_orbi    |                  940.68 |                285.02 |           5 |
+| ethernet_orbi_v2 |                  449.61 |                171.24 |           9 |
+| wireless_base    |                   59.41 |                 68.43 |           9 |
+| wireless_orbi    |                  415.86 |                139.09 |          11 |
+
+
+Minimum of test results: 
+| Configuration    |   Download Speed (Mbps) |   Upload Speed (Mbps) |   Ping (ms) |
+|:-----------------|------------------------:|----------------------:|------------:|
+| ethernet_base    |                  794.72 |                147.76 |           2 |
+| ethernet_orbi    |                  893.96 |                203.15 |           3 |
+| ethernet_orbi_v2 |                  308.34 |                 90.68 |           6 |
+| wireless_base    |                   36.59 |                 48.91 |           5 |
+| wireless_orbi    |                  231.26 |                 80.88 |           6 |
+
 ## Conclusions 
 
 Overall, it appears that the best possible configuration is the 
@@ -108,8 +128,18 @@ i.e. a much lower standard deviation.
 
 Several key inferences can be made regarding the entire experiment:  
 - *The Orbi provides a significant boost in wireless connection over the basic router.* 
+Comparing *wireless_orbi* to *wireless_base*, 
+we see that there is about about an eightfold increase in download speed, 
+a doubling of upload speed, and lower ping. 
 - *Using wired connection, it is possible to obtain speeds extremely close to the theoretical maximum.*
+This can be seen from both *ethernet_base* and *ethernet_orbi*, 
+as the average speeds are both very close to the supposed limit of 940 Mbps. 
+In fact, the maximum download speed for both (slightly) exceeds 940 Mbps. 
 - *Using wired connection with the satellite Orbi does not offer any significant speed improvements over wireless.*
+Comparing *wireless_orbi* to *ethernet_orbi_v2*, we can see that 
+there is little difference between the download speeds. 
+While the upload speed is slightly faster on average for *ethernet_orbi_v2*, 
+the difference does not seem to be significant. 
 
 All of these results imply the following: 
 1. The service offered by Verizon does in fact live up to its potential, at least when using wired connection. 
