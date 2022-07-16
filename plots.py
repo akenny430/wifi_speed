@@ -37,9 +37,9 @@ ping_fig = (
 
 # combined boxplots (not really good because scaling is so different)
 combined_fig = (
-    pn.ggplot(wifi_melt_df, pn.aes(x="code", y="value")) + 
+    pn.ggplot(wifi_melt_df, pn.aes(x="code", y="test_result")) + 
     pn.geom_boxplot() + 
-    pn.facet_wrap("variable") + 
+    pn.facet_wrap("test_type") + 
     pn.lims(y=(0,1000)) + 
     pn.theme_bw()
 )

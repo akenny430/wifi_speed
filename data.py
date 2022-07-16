@@ -59,6 +59,15 @@ speed5 = pd.DataFrame(
 # combined dataset 
 wifi_df = pd.concat((speed1, speed2, speed3, speed4, speed5), ignore_index=True)
 
+# melting df to use for combined plots 
+wifi_melt_df = pd.melt(
+    wifi_df, 
+    id_vars="code", 
+    value_vars=["download", "upload", "ping"], 
+    var_name="test_type", 
+    value_name="test_result"
+)
+
 
 if __name__ == "__main__": 
 	print(wifi_df) 
