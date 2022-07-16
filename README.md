@@ -58,19 +58,43 @@ Below shows two relevant figures:
 - Box plots for the test results for each of the three criteria, split by each of the five configurations. 
 - Tables showing the mean, median, and standard deviation of each of the tests. 
 
-<!-- <p align="center">
-    <img src="./img/download_box.png" width="32%"/>
-    <img src="./img/upload_box.png" width="32%"/>
-    <img src="./img/ping_box.png" width="32%"/>
-</p> -->
 <figure>
-    <img src="./img/download_box.png" alt="Download tests box plot" width="32%"/>
-    <img src="./img/upload_box.png" alt="Upload tests box plot" width="32%"/>
-    <img src="./img/ping_box.png" alt="Ping tests box plot" width="32%"/>
+    <img src="./img/download_box.png" alt="Download tests box plot" width="100%"/>
+    <img src="./img/upload_box.png" alt="Upload tests box plot" width="100%"/>
+    <img src="./img/ping_box.png" alt="Ping tests box plot" width="100%"/>
     <figcaption> 
         Box plots of the results from each of the three tests. 
     </figcaption>
 </figure>
+
+Mean of test results: 
+| Configuration    |   Download Speed (Mbps) |   Upload Speed (Mbps) |   Ping (ms) |
+|:-----------------|------------------------:|----------------------:|------------:|
+| ethernet_base    |                 911.481 |               199.451 |         4.1 |
+| ethernet_orbi    |                 931.505 |               238.505 |         3.5 |
+| ethernet_orbi_v2 |                 369.147 |               140.675 |         7.4 |
+| wireless_base    |                  45.2   |                55.027 |         7.2 |
+| wireless_orbi    |                 365.204 |               111.108 |         9   |
+
+
+Median of test results: 
+| Configuration    |   Download Speed (Mbps) |   Upload Speed (Mbps) |   Ping (ms) |
+|:-----------------|------------------------:|----------------------:|------------:|
+| ethernet_base    |                 931.215 |               206.455 |         4   |
+| ethernet_orbi    |                 937.25  |               236.795 |         3   |
+| ethernet_orbi_v2 |                 364.265 |               144.615 |         7.5 |
+| wireless_base    |                  44.025 |                53.475 |         7   |
+| wireless_orbi    |                 389.17  |               105.925 |         9.5 |
+
+
+Standard deviation of test results: 
+| Configuration    |   Download Speed (Mbps) |   Upload Speed (Mbps) |   Ping (ms) |
+|:-----------------|------------------------:|----------------------:|------------:|
+| ethernet_base    |                 45.5116 |              31.1031  |    2.02485  |
+| ethernet_orbi    |                 14.0623 |              27.1253  |    0.849837 |
+| ethernet_orbi_v2 |                 39.5545 |              21.7045  |    0.966092 |
+| wireless_base    |                  6.5029 |               5.61764 |    1.22927  |
+| wireless_orbi    |                 58.7189 |              16.7771  |    1.88562  |
 
 ## Conclusions 
 
