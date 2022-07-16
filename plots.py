@@ -3,10 +3,12 @@ import plotnine as pn
 from data import wifi_df, wifi_melt_df
 
 
+# colors 
 speed_cyan = "#98fbbd"
 speed_purple = "#ee7cd9"
 speed_gray = "#d3d3d3"
 
+# download boxplot 
 download_fig = (
     pn.ggplot(wifi_df, pn.aes(x="code", y="download")) + 
     pn.geom_boxplot(fill=speed_cyan) + 
@@ -15,6 +17,7 @@ download_fig = (
     pn.theme_bw()
 )
 
+# upload boxplot 
 upload_fig = (
     pn.ggplot(wifi_df, pn.aes(x="code", y="upload")) + 
     pn.geom_boxplot(fill=speed_purple) + 
@@ -23,6 +26,7 @@ upload_fig = (
     pn.theme_bw()
 )
 
+# ping boxplot 
 ping_fig = (
     pn.ggplot(wifi_df, pn.aes(x="code", y="ping")) + 
     pn.geom_boxplot(fill=speed_gray) + 
@@ -31,6 +35,7 @@ ping_fig = (
     pn.theme_bw()
 )
 
+# combined boxplots (not really good because scaling is so different)
 combined_fig = (
     pn.ggplot(wifi_melt_df, pn.aes(x="code", y="value")) + 
     pn.geom_boxplot() + 
@@ -39,8 +44,28 @@ combined_fig = (
     pn.theme_bw()
 )
 
-print(download_fig)
-print(upload_fig)
-print(ping_fig)
-# print(combined_fig)
-# download_fig.save("./img/download_box.png")
+def save_figs(do_combined: bool = False) -> None: 
+    """
+    Saving boxplots to their respective locations 
+    By default does not save the combined plot, set do_combined=True to save 
+    """
+    download_fig.save("./img/download_box.png")
+    upload_fig.save("./img/upload_box.png")
+    ping_fig.save("./img/ping_box.png")
+    if do_combined: 
+        combined_fig.save("./img/combined_box.png")
+
+def print_figs(do_combined: bool = False) -> None: 
+    """
+    Prints boxplots for all three variables 
+    By default does not print the combined plot, set do_combined=True to print  
+    """
+    print(download_fig)
+    print(upload_fig)
+    print(ping_fig)
+    if do_combined: 
+        print(do_combined) 
+
+if __name__ == "__main__": 
+    save_figs()
+    print_figs()
