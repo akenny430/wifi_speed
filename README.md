@@ -62,9 +62,9 @@ Below shows two relevant figures:
     <img src="./img/download_box.png" alt="Download tests box plot" width="100%"/>
     <img src="./img/upload_box.png" alt="Upload tests box plot" width="100%"/>
     <img src="./img/ping_box.png" alt="Ping tests box plot" width="100%"/>
-    <figcaption> 
+    <!-- <figcaption> 
         Box plots of the results from each of the three tests. 
-    </figcaption>
+    </figcaption> -->
 </figure>
 
 Mean of test results: 
