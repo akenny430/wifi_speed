@@ -1,9 +1,11 @@
+#! /usr/bin/env python3 
+
 import pandas as pd
-from pyparsing import col
 
 from stats import summary_dict
 
 
+# converting column names to be more professional 
 col_convert = {
     "download": "Download Speed (Mbps)", 
     "upload": "Upload Speed (Mbps)", 
@@ -11,6 +13,11 @@ col_convert = {
 }
 
 def print_summary_tabs(summary_dict: dict[str, pd.DataFrame]) -> None: 
+    """
+    Prints out tables in terminal that can be copied to README 
+    Takes in dict where key is the name and the value is the df corresponding to that 
+    e.g. "Mean" and a df with the mean of your test results 
+    """
     print("\n")
     for name, df in summary_dict.items(): 
         df.index.names = ["Configuration"]
