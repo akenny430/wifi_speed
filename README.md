@@ -144,3 +144,58 @@ the difference does not seem to be significant.
 All of these results imply the following: 
 1. The service offered by Verizon does in fact live up to its potential, at least when using wired connection. 
 2. The Orbi only serves to improve its performance, especially for wireless connection. 
+
+## Appendix: full dataset 
+
+| Configuration    |   Download Speed (Mbps) |   Upload Speed (Mbps) |   Ping (ms) |
+|:-----------------|------------------------:|----------------------:|------------:|
+| wireless_base    |                   39.42 |                 51.25 |           9 |
+| wireless_base    |                   51.27 |                 51.83 |           9 |
+| wireless_base    |                   40.69 |                 56.03 |           7 |
+| wireless_base    |                   36.59 |                 54.73 |           5 |
+| wireless_base    |                   42.94 |                 58.96 |           6 |
+| wireless_base    |                   47.45 |                 48.91 |           7 |
+| wireless_base    |                   43.87 |                 51.15 |           7 |
+| wireless_base    |                   46.18 |                 56.76 |           8 |
+| wireless_base    |                   44.18 |                 52.22 |           7 |
+| wireless_base    |                   59.41 |                 68.43 |           7 |
+| wireless_orbi    |                  414.38 |                130.25 |          11 |
+| wireless_orbi    |                  385.89 |                105.76 |          10 |
+| wireless_orbi    |                  295.05 |                117.11 |          11 |
+| wireless_orbi    |                  231.26 |                 80.88 |           6 |
+| wireless_orbi    |                  363.83 |                123.25 |           7 |
+| wireless_orbi    |                  360.19 |                105.25 |           7 |
+| wireless_orbi    |                  393.4  |                106.09 |          11 |
+| wireless_orbi    |                  415.86 |                104.98 |          10 |
+| wireless_orbi    |                  399.73 |                139.09 |           9 |
+| wireless_orbi    |                  392.45 |                 98.42 |           8 |
+| ethernet_orbi    |                  939.25 |                258.14 |           3 |
+| ethernet_orbi    |                  939.03 |                203.15 |           3 |
+| ethernet_orbi    |                  940.68 |                285.02 |           3 |
+| ethernet_orbi    |                  934.33 |                272.19 |           3 |
+| ethernet_orbi    |                  935.8  |                231.77 |           3 |
+| ethernet_orbi    |                  927.74 |                238.71 |           3 |
+| ethernet_orbi    |                  938.7  |                204.45 |           3 |
+| ethernet_orbi    |                  938.85 |                216.87 |           5 |
+| ethernet_orbi    |                  893.96 |                239.87 |           4 |
+| ethernet_orbi    |                  926.71 |                234.88 |           5 |
+| ethernet_orbi_v2 |                  389.2  |                129.51 |           8 |
+| ethernet_orbi_v2 |                  449.61 |                130.93 |           8 |
+| ethernet_orbi_v2 |                  398.95 |                138.18 |           7 |
+| ethernet_orbi_v2 |                  367.86 |                152.07 |           7 |
+| ethernet_orbi_v2 |                  352.9  |                136.34 |           6 |
+| ethernet_orbi_v2 |                  337.38 |                171.24 |           7 |
+| ethernet_orbi_v2 |                  360.67 |                 90.68 |           6 |
+| ethernet_orbi_v2 |                  387.81 |                154.19 |           9 |
+| ethernet_orbi_v2 |                  338.75 |                151.05 |           8 |
+| ethernet_orbi_v2 |                  308.34 |                152.56 |           8 |
+| ethernet_base    |                  889.57 |                228.67 |           4 |
+| ethernet_base    |                  913.01 |                197.11 |           2 |
+| ethernet_base    |                  939.99 |                205.25 |           4 |
+| ethernet_base    |                  893    |                157.08 |           4 |
+| ethernet_base    |                  927.26 |                225.44 |           6 |
+| ethernet_base    |                  941.29 |                233.71 |           2 |
+| ethernet_base    |                  935.17 |                222.42 |           6 |
+| ethernet_base    |                  794.72 |                147.76 |           3 |
+| ethernet_base    |                  939.88 |                169.41 |           8 |
+| ethernet_base    |                  940.92 |                207.66 |           2 |
